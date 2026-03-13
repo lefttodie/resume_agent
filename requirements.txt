@@ -1,0 +1,9 @@
+langgraph
+langchain
+langchain-community
+# sentence-transformers
+pinecone
+playwright
+python-dotenv
+pypdf
+requests
