@@ -1,3 +1,100 @@
 Job 1
-Title : Data Scientist
-URL   : https://in.linkedin.com/jobs/view/data-scientist-at-deloitte-4382580300?position=1&pageNum=0&refId=9ggRaGuYOEYN9%2Bc6rv9ZSA%3D%3D&trackingId=3u5mhybZxw7Q86z6gL7Q1g%3D%3D
+Title : Machine Learning Engineer - Application AI
+URL   : https://in.linkedin.com/jobs/view/machine-learning-engineer-application-ai-at-sap-4320944512?position=1&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=psnoHwB2EdW9RiF2kWMkXw%3D%3D
+About : Machine Learning Engineer - Application AI role at SAP located in Bengaluru, Karnataka, India
+--------------------------------------------------
+Job 2
+Title : Software Engineer
+URL   : https://in.linkedin.com/jobs/view/software-engineer-at-microsoft-4346206476?position=2&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=CFkaBHBhH%2B75XKha4h%2FZPw%3D%3D
+About : Software Engineer role at Microsoft located in Hyderabad, Telangana, India
+--------------------------------------------------
+Job 3
+Title : Data Scientist/Machine Learning
+URL   : https://in.linkedin.com/jobs/view/data-scientist-machine-learning-at-infosys-4367095780?position=3&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=tgbFyu5u1BYP8V3oAgXKVA%3D%3D
+About : Data Scientist/Machine Learning role at Infosys located in Bengaluru East, Karnataka, India
+--------------------------------------------------
+Job 4
+Title : AI/Ml Software Engineer in Noida, Ghaziabad
+URL   : https://in.linkedin.com/jobs/view/ai-ml-software-engineer-in-noida-ghaziabad-at-ig-defence-4385590067?position=4&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=sgQDWSE5lYk3cqPpp%2F1REA%3D%3D
+About : AI/Ml Software Engineer in Noida, Ghaziabad role at IG Defence located in Noida, Uttar Pradesh, India
+--------------------------------------------------
+Job 5
+Title : AI/ML Data Scientist
+URL   : https://in.linkedin.com/jobs/view/ai-ml-data-scientist-at-infosys-finacle-4384667493?position=5&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=9FjgDGIph9qiCyTDnB8gAQ%3D%3D
+About : AI/ML Data Scientist role at Infosys Finacle located in Chennai, Tamil Nadu, India
+--------------------------------------------------
+Job 6
+Title : AI/ML Python Developer
+URL   : https://in.linkedin.com/jobs/view/ai-ml-python-developer-at-jcentrix-4384628529?position=6&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=x61lLpm%2Fzu09rb6aYvcYnA%3D%3D
+About : AI/ML Python Developer role at Jcentrix located in Noida, Uttar Pradesh, India
+--------------------------------------------------
+Job 7
+Title : AI/Ml Software Engineer in Noida, Ghaziabad
+URL   : https://in.linkedin.com/jobs/view/ai-ml-software-engineer-in-noida-ghaziabad-at-ig-defence-4385567995?position=7&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=wGgQz60slI6CnsOTzALNYQ%3D%3D
+About : AI/Ml Software Engineer in Noida, Ghaziabad role at IG Defence located in Ghaziabad, Uttar Pradesh, India
+--------------------------------------------------
+Job 8
+Title : Machine Learning Engineer - India
+URL   : https://in.linkedin.com/jobs/view/machine-learning-engineer-india-at-mercor-4384636041?position=8&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=zW3bL7Zdeote%2F21NsMXIlA%3D%3D
+About : Machine Learning Engineer - India role at Mercor located in Bengaluru, Karnataka, India
+--------------------------------------------------
+Job 9
+Title : Artificial Intelligence Lead
+URL   : https://in.linkedin.com/jobs/view/artificial-intelligence-lead-at-persistent-systems-4383119452?position=9&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=PQu0Uh1a99X%2FFDa0OIRUCQ%3D%3D
+About : Artificial Intelligence Lead role at Persistent Systems located in Bengaluru, Karnataka, India
+--------------------------------------------------
+Job 10
+Title : Platform Engineer (DevOps & AI/ML/Gen-AI)
+URL   : https://in.linkedin.com/jobs/view/platform-engineer-devops-ai-ml-gen-ai-at-epam-systems-4352130019?position=10&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=5DawffpZ2YFWrEWcpLpOXw%3D%3D
+About : Platform Engineer (DevOps & AI/ML/Gen-AI) role at EPAM Systems located in Pune Division, Maharashtra, India
+--------------------------------------------------
+Job 11
+Title : Python AI
+URL   : https://in.linkedin.com/jobs/view/python-ai-at-cgi-4385532756?position=11&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=BWh%2BzgvADL8TI7R%2BbQeRzg%3D%3D
+About : Python AI role at CGI located in Hyderabad, Telangana, India
+--------------------------------------------------
+Job 12
+Title : Data Scientist - Python
+URL   : https://in.linkedin.com/jobs/view/data-scientist-python-at-applied-data-finance-4385584435?position=12&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=DyvVupHcIhBbZid82ZsHuQ%3D%3D
+About : Data Scientist - Python role at Applied Data Finance located in Greater Kolkata Area
+--------------------------------------------------
+Job 13
+Title : AI/ML Engineer
+URL   : https://in.linkedin.com/jobs/view/ai-ml-engineer-at-bayone-solutions-4384631549?position=13&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=FaYmqT3tAUR4asj0ibsLGg%3D%3D
+About : AI/ML Engineer role at BayOne Solutions located in India
+--------------------------------------------------
+Job 14
+Title : ML Engineer
+URL   : https://in.linkedin.com/jobs/view/ml-engineer-at-egen-4385563279?position=14&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=vEVUctcZh4AoO1UQFj7i9w%3D%3D
+About : ML Engineer role at Egen located in Hyderabad, Telangana, India
+--------------------------------------------------
+Job 15
+Title : AI ML Engineer
+URL   : https://in.linkedin.com/jobs/view/ai-ml-engineer-at-sunrise-systems-inc-4384611428?position=15&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=SxJ%2FQmCmDmKHExmanNj5BQ%3D%3D
+About : AI ML Engineer role at Sunrise Systems, Inc. located in India
+--------------------------------------------------
+Job 16
+Title : AI/ML Engineer
+URL   : https://in.linkedin.com/jobs/view/ai-ml-engineer-at-ust-4373469419?position=16&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=nxl%2F5%2F5DZhu5%2ByHEWP%2BnlQ%3D%3D
+About : AI/ML Engineer role at UST located in Bengaluru, Karnataka, India
+--------------------------------------------------
+Job 17
+Title : Senior Software Engineer, Machine Learning
+URL   : https://in.linkedin.com/jobs/view/senior-software-engineer-machine-learning-at-roku-4339019051?position=17&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=Gju6Y0x607utpJ86n5KJZQ%3D%3D
+About : Senior Software Engineer, Machine Learning role at Roku located in Bengaluru, Karnataka, India
+--------------------------------------------------
+Job 18
+Title : Gen AI developer - GO/JC/1437/2025
+URL   : https://in.linkedin.com/jobs/view/gen-ai-developer-go-jc-1437-2025-at-golden-opportunities-4384662033?position=18&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=8KakvpjWQ1TPUKAdYoKAIg%3D%3D
+About : Gen AI developer - GO/JC/1437/2025 role at Golden Opportunities located in Kochi, Kerala, India
+--------------------------------------------------
+Job 19
+Title : Data Scientist-Artificial Intelligence
+URL   : https://in.linkedin.com/jobs/view/data-scientist-artificial-intelligence-at-ibm-4373456595?position=19&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=fKcsVPAwfaWxiZOm0jnGnA%3D%3D
+About : Data Scientist-Artificial Intelligence role at IBM located in Bengaluru, Karnataka, India
+--------------------------------------------------
+Job 20
+Title : Artificial Intelligence Engineer
+URL   : https://in.linkedin.com/jobs/view/artificial-intelligence-engineer-at-darwinbox-4385393434?position=20&pageNum=0&refId=3%2BFgi%2FOSf64wcq%2FlZ3PdNA%3D%3D&trackingId=aYr0uvJxGqX0bRNx2JIeiA%3D%3D
+About : Artificial Intelligence Engineer role at Darwinbox located in Hyderabad, Telangana, India
+--------------------------------------------------
