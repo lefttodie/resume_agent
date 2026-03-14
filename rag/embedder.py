@@ -1,29 +1,34 @@
 import requests
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
-def create_embeddings(text_chunks):
-
-    embeddings = []
-
+def create_embeddings(chunks):
+    
     url = "https://openrouter.ai/api/v1/embeddings"
 
     headers = {
-        "Authorization": f"Bearer {OPENROUTER_API_KEY}"
+        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+        "Content-Type": "application/json",
+        "HTTP-Referer": "http://localhost",
+        "X-Title": "resume-agent"
     }
 
-    for chunk in text_chunks:
+    payload = {
+        "model": "text-embedding-3-small",
+        "input": chunks
+    }
 
-        payload = {
-            "model": "text-embedding-3-small",
-            "input": chunk
-        }
+    response = requests.post(url, headers=headers, json=payload)
 
-        response = requests.post(url, headers=headers, json=payload)
+    if response.status_code != 200:
+        raise Exception(f"Embedding error: {response.text}")
 
-        vector = response.json()["data"][0]["embedding"]
+    data = response.json()
 
-        embeddings.append(vector)
+    embeddings = [item["embedding"] for item in data["data"]]
 
     return embeddings

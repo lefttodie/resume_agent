@@ -1,11 +1,13 @@
-import pinecone
 import os
+from dotenv import load_dotenv
+from pinecone import Pinecone
 
-pinecone.init(
-    api_key=os.getenv("PINECONE_API_KEY")
-)
+load_dotenv()
 
-index = pinecone.Index("resume-index")
+pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+
+index = pc.Index("resume-index")
+
 
 def store_embeddings(chunks, embeddings):
 
@@ -13,12 +15,12 @@ def store_embeddings(chunks, embeddings):
 
     for i, (chunk, emb) in enumerate(zip(chunks, embeddings)):
 
-        vectors.append(
-            (
-                str(i),
-                emb,
-                {"text": chunk}
-            )
-        )
+        vectors.append({
+            "id": str(i),
+            "values": emb,
+            "metadata": {"text": chunk}
+        })
 
-    index.upsert(vectors)
+    index.upsert(vectors=vectors)
+
+    print("Embeddings stored in Pinecone:", len(vectors))
