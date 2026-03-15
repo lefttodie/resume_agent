@@ -2,9 +2,9 @@ from playwright.sync_api import sync_playwright
 import random
 import urllib.parse
 
-PROXY_USERNAME = "api5e199d7fe393aaf2"
-PROXY_PASSWORD = "RNW78Fm5"
-PROXY_HOST = "us.res.proxy-seller.com"
+PROXY_USERNAME = "USE YOUR USERNAME"
+PROXY_PASSWORD = "USE YOUR PASSWORD"
+PROXY_HOST = "USE YOUR HOST NAME"
 PORTS = list(range(10001, 10120))
 
 
