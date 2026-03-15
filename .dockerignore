@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+
+# Git
+.git
+.gitignore
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Local outputs
+jobs_*.csv
+jobs_*.json
+temp_resume_*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Playwright cache
+playwright-report/
+
+# Large data
+data/
+datasets/

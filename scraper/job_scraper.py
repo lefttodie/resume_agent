@@ -1,186 +1,121 @@
-# from playwright.sync_api import sync_playwright
-# import random
-
-# PROXY_USERNAME = "api5e199d7fe393aaf2"
-# PROXY_PASSWORD = "RNW78Fm5"
-# PROXY_HOST = "us.res.proxy-seller.com"
-# PORTS = list(range(10001, 10020))
-
-
-# def search_jobs(keyword):
-
-#     jobs = []
-
-#     port = random.choice(PORTS)
-
-#     proxy_config = {
-#         "server": f"http://{PROXY_HOST}:{port}",
-#         "username": PROXY_USERNAME,
-#         "password": PROXY_PASSWORD
-#     }
-
-#     url = f"https://www.linkedin.com/jobs/search/?keywords={keyword}&location=India&sortBy=DD"
-
-#     with sync_playwright() as p:
-
-#         browser = p.chromium.launch(
-#             headless=True,
-#             proxy=proxy_config
-#         )
-
-#         context = browser.new_context()
-#         page = context.new_page()
-
-#         page.goto(url, timeout=60000)
-
-#         page.wait_for_timeout(5000)
-
-#         cards = page.query_selector_all(".base-search-card")
-
-#         for c in cards[:20]:
-
-#             title_el = c.query_selector(".base-search-card__title")
-#             company_el = c.query_selector(".base-search-card__subtitle")
-#             link_el = c.query_selector("a.base-card__full-link")
-#             location_el = c.query_selector(".job-search-card__location")
-#             date_el = c.query_selector("time")
-
-#             job_url = link_el.get_attribute("href") if link_el else ""
-
-#             title = title_el.inner_text().strip() if title_el else ""
-#             company = company_el.inner_text().strip() if company_el else ""
-#             location = location_el.inner_text().strip() if location_el else ""
-#             date_posted = date_el.get_attribute("datetime") if date_el else ""
-
-#             # open job page to get description
-#             about = ""
-
-#             if job_url:
-#                 job_page = context.new_page()
-#                 try:
-#                     job_page.goto(job_url, timeout=30000)
-#                     job_page.wait_for_timeout(3000)
-
-#                     desc = job_page.query_selector(".show-more-less-html__markup")
-
-#                     if desc:
-#                         about = desc.inner_text()[:400]
-
-#                 except:
-#                     about = ""
-
-#                 job_page.close()
-
-#             job_type = "Unknown"
-
-#             if "remote" in location.lower():
-#                 job_type = "Remote"
-#             elif "hybrid" in location.lower():
-#                 job_type = "Hybrid"
-#             else:
-#                 job_type = "On-site"
-
-#             jobs.append({
-#                 "title": title,
-#                 "company": company,
-#                 "location": location,
-#                 "date_posted": date_posted,
-#                 "job_type": job_type,
-#                 "url": job_url,
-#                 "about": about
-#             })
-
-#         browser.close()
-
-#     return jobs
-
-
-
-
-
-
 from playwright.sync_api import sync_playwright
 import random
+import urllib.parse
 
 PROXY_USERNAME = "api5e199d7fe393aaf2"
 PROXY_PASSWORD = "RNW78Fm5"
 PROXY_HOST = "us.res.proxy-seller.com"
-PORTS = list(range(10001, 10020))
+PORTS = list(range(10001, 10120))
 
 
-def search_jobs(keyword):
+def search_jobs(keyword, website, job_type="job"):
 
     jobs = []
 
-    port = random.choice(PORTS)
+    if website != "linkedin":
+        return []
 
-    proxy_config = {
-        "server": f"http://{PROXY_HOST}:{port}",
-        "username": PROXY_USERNAME,
-        "password": PROXY_PASSWORD
-    }
+    try:
 
-    # last 24 hours filter
-    url = f"https://www.linkedin.com/jobs/search/?keywords={keyword}&location=India&sortBy=DD&f_TPR=r86400"
+        with sync_playwright() as p:
 
-    with sync_playwright() as p:
+            port = random.choice(PORTS)
 
-        browser = p.chromium.launch(
-            headless=True,
-            proxy=proxy_config
-        )
+            proxy_config = {
+                "server": f"http://{PROXY_HOST}:{port}",
+                "username": PROXY_USERNAME,
+                "password": PROXY_PASSWORD
+            }
 
-        context = browser.new_context()
+            browser = p.chromium.launch(
+                headless=True,
+                proxy=proxy_config
+            )
 
-        page = context.new_page()
+            encoded_keyword = urllib.parse.quote(keyword)
 
-        page.goto(url, timeout=60000)
+            url = (
+                f"https://www.linkedin.com/jobs/search/"
+                f"?keywords={encoded_keyword}"
+                f"&location=India"
+                f"&f_TPR=r3600"
+                f"&sortBy=DD"
+            )
 
-        # scroll to load more jobs
-        for _ in range(5):
-            page.mouse.wheel(0, 3000)
-            page.wait_for_timeout(1000)
+            print("Searching:", keyword)
+            print("URL:", url)
 
-        cards = page.query_selector_all(".base-search-card")
+            context = browser.new_context(
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+            )
 
-        for c in cards[:20]:
+            page = context.new_page()
 
-            title_el = c.query_selector(".base-search-card__title")
-            company_el = c.query_selector(".base-search-card__subtitle")
-            link_el = c.query_selector("a.base-card__full-link")
-            location_el = c.query_selector(".job-search-card__location")
-            date_el = c.query_selector("time")
+            page.goto(url, timeout=60000)
 
-            title = title_el.inner_text().strip() if title_el else ""
-            company = company_el.inner_text().strip() if company_el else ""
-            location = location_el.inner_text().strip() if location_el else ""
-            job_url = link_el.get_attribute("href") if link_el else ""
+            page.wait_for_timeout(5000)
 
-            date_posted = ""
+            cards = page.query_selector_all("li")
 
-            if date_el:
-                date_posted = date_el.inner_text().strip()
+            print("Cards found:", len(cards))
 
-            # detect job type
-            job_type = "On-site"
+            for card in cards:
 
-            loc_lower = location.lower()
+                try:
 
-            if "remote" in loc_lower:
-                job_type = "Remote"
-            elif "hybrid" in loc_lower:
-                job_type = "Hybrid"
+                    title_el = card.query_selector("h3")
+                    company_el = card.query_selector("h4")
+                    location_el = card.query_selector(".job-search-card__location")
+                    time_el = card.query_selector("time")
+                    link_el = card.query_selector("a")
 
-            jobs.append({
-                "title": title,
-                "company": company,
-                "location": location,
-                "date_posted": date_posted,
-                "job_type": job_type,
-                "url": job_url,
-                "about": f"{title} role at {company} located in {location}"
-            })
+                    if not title_el:
+                        continue
 
-        browser.close()
+                    title = title_el.inner_text().strip()
+
+                    company = ""
+                    if company_el:
+                        company = company_el.inner_text().strip()
+
+                    location = ""
+                    if location_el:
+                        location = location_el.inner_text().strip()
+
+                    date_posted = ""
+                    if time_el:
+                        date_posted = time_el.inner_text().strip()
+
+                    url_link = ""
+                    if link_el:
+                        url_link = link_el.get_attribute("href")
+
+                    job_type_value = "On-site"
+
+                    about = f"{title} role at {company} located in {location}"
+
+                    job = {
+                        "source": "linkedin_job",
+                        "title": title,
+                        "company": company,
+                        "location": location,
+                        "date_posted": date_posted,
+                        "job_type": job_type_value,
+                        "url": url_link,
+                        "about": about
+                    }
+
+                    jobs.append(job)
+
+                except:
+                    continue
+
+            browser.close()
+
+    except Exception as e:
+
+        print("Scraper error:", str(e))
+
+    print("Jobs extracted:", len(jobs))
 
     return jobs

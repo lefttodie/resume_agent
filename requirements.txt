@@ -1,3 +1,5 @@
+fastapi
+uvicorn
 langgraph
 langchain
 langchain-community
@@ -7,3 +9,5 @@ playwright
 python-dotenv
 pypdf
 requests
+pandas
+python-multipart
